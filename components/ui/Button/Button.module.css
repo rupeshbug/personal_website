@@ -8,4 +8,5 @@
     letter-spacing: 0.8px;
     cursor: pointer;
     border: none;
+    outline: none;
 }
