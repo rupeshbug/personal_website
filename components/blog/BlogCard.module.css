@@ -1,0 +1,38 @@
+.blogCard {
+    width: 50%;
+    text-align: justify;
+    cursor: pointer;
+}
+
+.category {
+ padding-bottom: 6px;
+}
+
+.title {
+    font-size: 1.5rem;
+    letter-spacing: 0.8px;
+}
+
+.description {
+    padding: 6px 0px;
+    color: rgb(92, 91, 91);
+}
+
+.blogInfo {
+    font-size: 0.8rem;
+    color: rgb(92, 91, 91);
+    display: flex;
+}
+
+.tags {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.tag {
+    padding: 0 6px;
+    background-color: rgb(243, 232, 206);
+    margin: 0 6px;
+    border-radius: 2px;
+}
+

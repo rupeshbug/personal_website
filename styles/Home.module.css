@@ -1,0 +1,22 @@
+.recentBlogs_title {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.heading {
+    font-size: 2rem;
+    letter-spacing: 0.8px;
+    margin-left: 10px;
+}
+
+.blogItems {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.blogNumber {
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    color: rgb(92, 91, 91);
+}

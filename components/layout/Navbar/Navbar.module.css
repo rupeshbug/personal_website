@@ -1,0 +1,104 @@
+.navbarWithBg {
+    background-color: rgb(228, 173, 24);
+}
+
+.navbarWithoutBg {
+    background-color: white;
+}
+
+.navbar {
+    padding: 10px 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.5s ease;
+}
+
+.logo {
+    flex-basis: 50%;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navItems {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navItems a {
+    color:black;
+}
+
+.socialIcons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.icon {
+    margin-left: 1rem;
+    color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+    .logo {
+      flex-basis: 30%;
+    }
+
+    .navItems {
+        flex-basis: 20%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar {
+        padding: 10px 4rem;
+    }
+    .logo {
+      flex-basis: 25%;
+    }
+}
+
+
+@media only screen and (max-width: 760px) {
+
+    .navbar {
+        padding: 10px 2rem;
+    }
+
+    .logo {
+      flex-basis: 30%;
+    }
+
+    .socialIcons {
+        display: none;
+    }
+
+    .rc {
+        width: 27px;
+    }
+
+    .dataInsights {
+        width: 145px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        padding: 10px 1rem;
+    }
+
+    .navItems {
+        display: none;
+    }
+}
+
