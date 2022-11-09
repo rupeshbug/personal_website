@@ -20,3 +20,9 @@
     font-size: 1.5rem;
     color: rgb(92, 91, 91);
 }
+
+@media only screen and (max-width: 600px) {
+    .blogNumber {
+        margin-right: 1.2rem;
+    }
+}
