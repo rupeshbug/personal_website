@@ -30,9 +30,40 @@
 }
 
 .tag {
-    padding: 0 6px;
-    background-color: rgb(243, 232, 206);
+    padding: 2px 5px;
+    background-color: rgb(245, 229, 192);
     margin: 0 6px;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
+@media only screen and (max-width: 970px) {
+    .blogCard {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .blogCard {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .blogCard {
+        width: 100%;
+        padding-right: 0.8rem;
+    }
+    .blogInfo {
+        flex-direction: column;
+    }
+    .tags {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .tag {
+        padding: 2px 5px;
+        background-color: rgb(243, 232, 206);
+        margin: 0 7px 0 0;
+        border-radius: 3px;
+    }
+}
