@@ -1,4 +1,7 @@
 .navButton {
+    background: none;
+    border: none;
+    outline: none;
     background-color: rgb(30, 28, 28);
     border-radius: 20px;
     padding: 8px 20px;
@@ -7,6 +10,4 @@
     font-size: 1rem;
     letter-spacing: 0.8px;
     cursor: pointer;
-    border: none;
-    outline: none;
 }
