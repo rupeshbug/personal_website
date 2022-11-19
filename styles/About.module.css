@@ -1,0 +1,14 @@
+/* .main {
+    margin-top: 4rem;
+    padding: 1rem 7rem;
+    background-image: linear-gradient( 174.2deg,  rgb(250, 230, 201) 7.1%, rgb(235, 247, 231) 67.4% );
+
+} */
+
+.about {
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
