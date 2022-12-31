@@ -7,13 +7,6 @@ import { motion } from "framer-motion";
 const Calculus = () => {
   const router = useRouter();
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
-
   const handleScroll = useCallback(
     (event) => {
       if (window.scrollY > 5) {
@@ -22,6 +15,13 @@ const Calculus = () => {
     },
     [router]
   );
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
 
   return (
     <>
