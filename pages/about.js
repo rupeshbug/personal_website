@@ -7,6 +7,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Navbar from "../components/layout/Navbar";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const About = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -28,7 +29,7 @@ const About = () => {
         options={{
           background: {
             color: {
-              value: "#e8c8ce",
+              value: "#16A085",
             },
           },
           fpsLimit: 120,
@@ -100,11 +101,13 @@ const About = () => {
         init={particlesInit}
         loaded={particlesLoaded}
       ></Particles>
-      <div
+      <motion.div
+        initial={{ x: "100%", rotateY: 90 }}
+        animate={{ x: 0, rotateY: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
         style={{
           position: "fixed",
           zIndex: 10,
-          opacity: 0.8,
           top: "0",
           height: "100vh",
           display: "flex",
@@ -112,6 +115,7 @@ const About = () => {
           justifyContent: "space-between",
           padding: "0 7rem",
           flexWrap: "wrap",
+          color: "#EEEEEE",
         }}
       >
         <div style={{ flexBasis: "45%" }}>
@@ -124,7 +128,7 @@ const About = () => {
             and python
           </p>
           <div style={{ display: "flex" }}>
-            <Link href="/">
+            <Link href="/statistics">
               <button
                 style={{
                   marginTop: "1rem",
@@ -137,7 +141,7 @@ const About = () => {
                   fontSize: "1.1rem",
                 }}
               >
-                My Blogs
+                Look Into My Data Science Toolkit
               </button>
             </Link>
             <button
@@ -157,12 +161,12 @@ const About = () => {
         </div>
         <div style={{ height: "100%", flexBasis: "45%" }}>
           <img
-            src="/profile.png"
+            src="/profile-pic.png"
             alt="photo"
-            style={{ marginTop: "2rem", height: "85%", marginTop: "5rem" }}
+            style={{ marginTop: "2rem", height: "50%", marginTop: "30%" }}
           />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

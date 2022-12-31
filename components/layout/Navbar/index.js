@@ -48,7 +48,7 @@ const Navbar = () => {
           <a>Home</a>
         </Link>
         <Link href="/about">
-          <a>My Story</a>
+          <a>About Me</a>
         </Link>
       </div>
       <div className={styles.navButton}>
