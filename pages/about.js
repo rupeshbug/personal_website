@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
 import styles from "../styles/About.module.css";
-import "animate.css";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -11,15 +10,10 @@ import { motion } from "framer-motion";
 
 const About = () => {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
   }, []);
 
   return (
@@ -99,71 +93,36 @@ const About = () => {
           detectRetina: true,
         }}
         init={particlesInit}
-        loaded={particlesLoaded}
       ></Particles>
       <motion.div
+        className={styles.container}
         initial={{ x: "100%", rotateY: 90 }}
         animate={{ x: 0, rotateY: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        style={{
-          position: "fixed",
-          zIndex: 10,
-          top: "0",
-          height: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "0 7rem",
-          flexWrap: "wrap",
-          color: "#EEEEEE",
-        }}
       >
-        <div style={{ flexBasis: "45%" }}>
-          <h2 style={{ fontSize: "2rem", fontWeight: "bold" }}>
-            Hey I am Rupesh Chaulagain & I am Data Scientist and Machine
-            Learning Engineer
+        <div className={styles.content}>
+          <h2 className={styles.intro}>
+            Hey I am Rupesh Chaulagain & I am a Data Scientist and Machine
+            Learning Engineer.
           </h2>
-          <p style={{ fontSize: "1.5rem", marginTop: "1rem" }}>
+          <p className={styles.introPara}>
             I am currenly diving deep into statistics, linear algebra, calculus
-            and python
+            and python.
           </p>
-          <div style={{ display: "flex" }}>
+          <div className={styles.buttons}>
             <Link href="/statistics">
-              <button
-                style={{
-                  marginTop: "1rem",
-                  padding: "10px 15px",
-                  border: "none",
-                  borderRadius: "10px",
-                  cursor: "pointer",
-                  backgroundColor: "rgb(228, 173, 24)",
-                  color: "white",
-                  fontSize: "1.1rem",
-                }}
-              >
+              <button className={styles.toolkitBtn}>
                 Look Into My Data Science Toolkit
               </button>
             </Link>
-            <button
-              style={{
-                marginTop: "1rem",
-                padding: "10px 15px",
-                border: "none",
-                borderRadius: "10px",
-                cursor: "pointer",
-                fontSize: "1.1rem",
-                marginLeft: "1rem",
-              }}
-            >
-              Download My CV
-            </button>
+            <button className={styles.cvBtn}>Download My CV</button>
           </div>
         </div>
-        <div style={{ height: "100%", flexBasis: "45%" }}>
+        <div className={styles.profile}>
           <img
+            className={styles.profileImg}
             src="/profile-pic.png"
             alt="photo"
-            style={{ marginTop: "2rem", height: "50%", marginTop: "30%" }}
           />
         </div>
       </motion.div>
