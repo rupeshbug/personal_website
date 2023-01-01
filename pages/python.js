@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import "animate.css";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
