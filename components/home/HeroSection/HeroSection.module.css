@@ -30,8 +30,13 @@
     font-size: 1.5rem;
 }
 
-.heroSection_button {
+.buttons {
+    display: flex;
     margin-top: 2rem;
+}
+
+.writingBtn {
+    margin-right: 1rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -54,8 +59,18 @@
     }
 }
 
-@media only screen and (max-width: 60px) {
+@media only screen and (max-width: 600px) {
     .heroSection {
         padding: 0 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .aboutBtn {
+        margin-top: 1rem;
     }
 }
