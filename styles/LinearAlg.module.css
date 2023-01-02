@@ -1,6 +1,6 @@
 .container {
     position: absolute;
-    top: 10%;
+    top: 9%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
 }
 
 .mainDiv {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .content > h2 {
